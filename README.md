@@ -1,2 +1,3 @@
 # cf-workshop-react-products
-React workshop to consume products API.
+
+React Código Facilito workshop to consume product API.
