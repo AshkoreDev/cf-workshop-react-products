@@ -13,7 +13,7 @@ function Products() {
       .then((data) =>setProducts(data));
 
 	}, []);
-
+	
 	return (
 
 		<section>

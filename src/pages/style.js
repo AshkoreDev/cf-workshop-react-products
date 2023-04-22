@@ -23,12 +23,15 @@ export const Card = styled.article `
 
 	& > img {
 		width: 120px;
-		height; 160px;
-		border-radius: inherit;
+		height: 160px;
 	}
 
 	& > a {
-		text-align: center
+		color: #000;
+		text-align: center;
+	}
+
+	& > p {
+		font-weight: bold;
 	}
 `;
-
