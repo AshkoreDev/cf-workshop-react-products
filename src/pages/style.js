@@ -35,3 +35,40 @@ export const Card = styled.article `
 		font-weight: bold;
 	}
 `;
+
+export const CardDetail = styled.article `
+	width: 300px;
+	margin: 5px auto;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	border-radius: 10px;
+	border: 1px solid #000;
+
+	& > figure {
+		width: 250px;
+		// height: 358px;
+		margin: 0 auto;
+
+		& > img {
+			width: 100%;
+		}
+	}
+
+	& > div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+
+		& h2 {
+			text-align: center;
+		}
+		
+		& span {
+			color: #804c00;
+		}
+	}
+`;
