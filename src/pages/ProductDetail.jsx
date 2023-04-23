@@ -1,31 +1,36 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Details from './components/Details.jsx';
-import { Title } from './style.js';
+import { Title, ProductsList } from './style.js';
+import ProductCard from './components/ProductCard.jsx';
 
 function ProductDetail() {
 
 	const { id } = useParams();
 
-	const [detail, setDetail] = useState({});
+	const [product, setProduct] = useState({});
 
 	useEffect(() => {
 
 		fetch(`https://fakestoreapi.com/products/${id}`)
       .then((res) => res.json())
-      .then((data) => setDetail(data));
+      .then((data) => setProduct(data));
 
 	}, []);
 	
 	return (
 
-		<section>
+		<ProductsList>
 			{
-				(Object.keys(detail).length === 0)
+				(Object.keys(product).length === 0)
 					? <Title>Cargando...</Title>
-					: <Details detail={detail}/>
+					: <ProductCard 
+							product={product} 
+							rating={product.rating} 
+							category={product.category} 
+							description={product.description}
+					  />
 			}	
-		</section>
+		</ProductsList>
 
 	);
 };

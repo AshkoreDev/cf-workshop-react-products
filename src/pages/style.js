@@ -7,7 +7,7 @@ export const Title = styled.h2 `
 	text-align: center;
 	letter-spacing: 1.2px;
 `;
-
+ 
 export const ProductsList = styled.section `
 	margin: 20px auto;
 	padding: 10px;
@@ -20,7 +20,7 @@ export const ProductsList = styled.section `
 
 export const Card = styled.article `
 	width: 250px;
-	height: 280px;
+	min-height: 380px;
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
@@ -29,52 +29,35 @@ export const Card = styled.article `
 	border-radius: 10px;
 	border: 1px solid #000;
 
-	& > img {
-		width: 120px;
-		height: 160px;
+	@media (min-width: 768px) {
+		width: 300px;
+		min-height: 350px;
 	}
-
-	& > a {
-		color: #000;
-		text-align: center;
-	}
-
-	& > p {
-		font-weight: bold;
-	}
-`;
-
-export const CardDetail = styled.article `
-	width: 300px;
-	margin: 10px auto;
-	padding: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 20px;
-	border-radius: 10px;
-	border: 1px solid #000;
 
 	& > figure {
-		width: 250px;
-		// height: 358px;
+		width: 200px;
+		height: 250px;
 		margin: 0 auto;
 
-		& > img {
+		& img {
 			width: 100%;
+			height: 100%;
 		}
 	}
 
 	& > div {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 10px;
+		color: #000;
+		text-align: center;
 
 		& h2 {
-			text-align: center;
+			font-size: 18px;
 		}
-		
+		& a {
+			color: #000;
+		}
+		& p {
+			margin-top: 10px;
+		}
 		& span {
 			color: #804c00;
 		}

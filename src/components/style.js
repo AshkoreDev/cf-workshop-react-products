@@ -22,4 +22,10 @@ export const NavBar = styled.nav `
 		color: #fff;
 		font-size: 1.2em;
 	}
+
+	@media (hover:hover) {
+	  & a:hover {
+			opacity: 0.8;
+		}
+	}
 `;
