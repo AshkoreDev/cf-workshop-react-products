@@ -8,7 +8,7 @@ function ProductCard({ product }) {
 	return (
 
 		<Card>
-			<img src={image} alt={`${title} image`} width="120" height="160"/>
+			<img src={image} alt={`${title} image`} width="120" height="160" loading="lazy"/>
 			<Link to={`/products/${id}`}>{title}</Link>
 			<p>{price}$</p>
 		</Card>

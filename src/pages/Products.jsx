@@ -20,8 +20,8 @@ function Products() {
 			<Title>PRODUCTS LIST</Title>
 			<ProductsList>
 				{
-					(!products)
-						? <h3>Cargando...</h3>
+					(Object.keys(products).length === 0)
+						? <Title>Cargando...</Title>
 						: products.map((product) => <ProductCard key={product.id} product={product}/>)
 				}
 			</ProductsList>

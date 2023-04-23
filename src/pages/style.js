@@ -46,7 +46,7 @@ export const Card = styled.article `
 
 export const CardDetail = styled.article `
 	width: 300px;
-	margin: 5px auto;
+	margin: 10px auto;
 	padding: 10px;
 	display: flex;
 	flex-direction: column;

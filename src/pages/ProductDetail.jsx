@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Details from './components/Details.jsx';
+import { Title } from './style.js';
 
 function ProductDetail() {
 
@@ -14,12 +15,16 @@ function ProductDetail() {
       .then((res) => res.json())
       .then((data) => setDetail(data));
 
-	}, [detail]);
-
+	}, []);
+	
 	return (
 
 		<section>
-			<Details detail={detail}/>
+			{
+				(Object.keys(detail).length === 0)
+					? <Title>Cargando...</Title>
+					: <Details detail={detail}/>
+			}	
 		</section>
 
 	);

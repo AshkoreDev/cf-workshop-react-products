@@ -8,7 +8,7 @@ function Details({ detail }) {
 
 		<CardDetail>
 			<figure>
-				<img src={image} alt={`${title} image`}/>
+				<img src={image} alt={`${title} image`} width="250px" loading="lazy"/>
 			</figure>
       <div>
       	<h2>{title}</h2>
