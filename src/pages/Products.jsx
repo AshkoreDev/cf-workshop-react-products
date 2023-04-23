@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ProductsList } from './style.js';
+import { Title, ProductsList } from './style.js';
 import ProductCard from './components/ProductCard.jsx';
 
 function Products() {
@@ -17,7 +17,7 @@ function Products() {
 	return (
 
 		<section>
-			<h2>Lista de productos</h2>
+			<Title>PRODUCTS LIST</Title>
 			<ProductsList>
 				{
 					(!products)

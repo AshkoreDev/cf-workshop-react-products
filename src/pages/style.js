@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const Title = styled.h2 ` 
+	width: 220px;
+	margin: 30px auto;
+	color: #673ab7;
+	text-align: center;
+	letter-spacing: 1.2px;
+`;
+
 export const ProductsList = styled.section `
 	margin: 20px auto;
 	padding: 10px;
